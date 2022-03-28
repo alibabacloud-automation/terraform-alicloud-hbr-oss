@@ -3,7 +3,7 @@ Terraform module which creates Hybrid Backup Recovery (HBR) for OSS on Alibaba C
 terraform-alicloud-hbr-oss
 =====================================================================
 
-[English](README.md) | 简体中文
+[English](https://github.com/terraform-alicloud-modules/terraform-alicloud-hbr-oss/blob/main/README.md) | 简体中文
 
 本 Module 用于基于HBR自动化构建OSS备份和恢复计划，包含：`HBR`。
 
@@ -17,6 +17,7 @@ terraform-alicloud-hbr-oss
 ```hcl
 module "example" {
   source             = "terraform-alicloud-modules/hbr-oss/alicloud"
+  create_backup_plan = true
   name               = "tf-test-hbr-oss"
   bucket             = "tf-test-hbr-oss"
   prefix             = "/"
